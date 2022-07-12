@@ -4,24 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/Alura.png"/>
     <title>Encriptador de texto</title>
 </head>
+
 <body>
-                <textarea type="text" name="" id="textoIngresado" cols="30" rows="10" placeholder="Ingresa tu texto aquí"></textarea>
-                <button id="btnEncriptar">Encriptar</button>
-                <button id="btnDesencriptar">Desencriptar</button>
-
-         <div id="resultado">
-            <textarea readonly="readonly" name="" id="textoDevuelto" cols="30" rows="10"></textarea>
-
+    <section class="main container">
+      <div class="logo">
+        <a href="#" class="logo__cta">
+          <img src="img/Alura.png" alt="" class="logo__img">
+        </a>
+      </div>
+    </section>
+  
+    <section class="second container">
+      <div class="form">
+        <div class="form__input">
+          <input id="textoAEncriptar" type="text" placeholder="Ingrese el texto aqui">
         </div>
-        <footer>@yagamiar15 - Dario Pacheco</footer>
-    
-    <script src='main.js'></script>
-    <script src="encriptar.js"></script>
+  
+        <div class="buttons">
+          <div class="alert">
+            <img class="alert__img" src="img/alert.png" alt="">
+            <p class="alert__paragraph">Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="botones">
+            <button id="btnEncriptar" class="btn encriptar">Encriptar</button>
+            <button id="btnDesencriptar" class="btn desencriptar">Desencriptar</button>
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="result">
+        <figure class="result__img">
+          <img src="img/figure.png" alt="">
+        </figure>
+        <h3 id="result__msg" class="result__title">
+          Tu resultado se muestra aquí
+        </h3>
+        <textarea id="textoEncriptado" class="result__paragraph" name="textarea" rows="10" cols="40"
+          onchange="this.value=this.value.toLowerCase();"
+          placeholder="Ingresa el texto que desees encriptar o desencriptar"></textarea>
+      </div>
+    </section>
+            
+    <footer>@yagamiar15 - Dario Pacheco</footer>
+    <script src='/scripts/main.js'></script>
+    <!-- <script src="/scripts/encriptar.js"></script> -->
     
 </body>
-
 
 </html>
